@@ -1,0 +1,456 @@
+
+
+<!DOCTYPE html>
+<html lang="en" data-default-color-scheme=auto>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="https://img.icons8.com/ios/250/000000/idea-sharing.png">
+  <link rel="icon" href="https://img.icons8.com/ios/250/000000/idea-sharing.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="John Doe">
+  <meta name="keywords" content="">
+  
+    <meta name="description" content="什麼是心智?什麼是隨機?在第一章，作者讓我們思考什麼是心智。怎麼樣叫做有智慧？機器有智慧嗎？在過去，為了測量人類的智慧，心理學家提出各種不同的智力理論，並基於這些理論發展出多種智力測驗。那我們要如何測量機器的心智？Turing (1950) 提出「圖靈測試」的思想實驗：若機器能和人類對話，而人類無法分辨其為機器或是人類，那麼這台機器是有智慧的。言下之意，「智慧」不只需要同等於人類的學習、推論、規劃">
+<meta property="og:type" content="article">
+<meta property="og:title" content="【閱讀筆記】Swarm Intelligence | 什麼是心智?什麼是隨機?">
+<meta property="og:url" content="http://example.com/2022/04/25/Swarm-Intelligence-2/index.html">
+<meta property="og:site_name" content="Yore&#39;s zettelkasten">
+<meta property="og:description" content="什麼是心智?什麼是隨機?在第一章，作者讓我們思考什麼是心智。怎麼樣叫做有智慧？機器有智慧嗎？在過去，為了測量人類的智慧，心理學家提出各種不同的智力理論，並基於這些理論發展出多種智力測驗。那我們要如何測量機器的心智？Turing (1950) 提出「圖靈測試」的思想實驗：若機器能和人類對話，而人類無法分辨其為機器或是人類，那麼這台機器是有智慧的。言下之意，「智慧」不只需要同等於人類的學習、推論、規劃">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2022-04-24T20:03:47.000Z">
+<meta property="article:modified_time" content="2022-05-02T14:58:50.773Z">
+<meta property="article:author" content="John Doe">
+<meta property="article:tag" content="swarm intelligence">
+<meta property="article:tag" content="AI">
+<meta property="article:tag" content="machine learning">
+<meta property="article:tag" content="mind">
+<meta name="twitter:card" content="summary_large_image">
+  
+  
+  <title>【閱讀筆記】Swarm Intelligence | 什麼是心智?什麼是隨機? - Yore&#39;s zettelkasten</title>
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4/dist/css/bootstrap.min.css" />
+
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/github-markdown-css@4/github-markdown.min.css" />
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hint.css@2/hint.min.css" />
+
+  
+    
+    
+      
+      <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@10/styles/github-gist.min.css" />
+    
+  
+
+  
+    <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3/dist/jquery.fancybox.min.css" />
+  
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_ba1fz6golrf.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_lbnruvf0jn.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+<!-- 自定义样式保持在最底部 -->
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    var CONFIG = {"hostname":"example.com","root":"/","version":"1.8.14","typing":{"enable":false,"typeSpeed":70,"cursorChar":"_","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":true,"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml"};
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+<meta name="generator" content="Hexo 6.1.0"></head>
+
+
+<body>
+  <header style="height: 70vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>Yore</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                Home
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                Archives
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                Categories
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                Tags
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                About
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              &nbsp;<i class="iconfont icon-search"></i>&nbsp;
+            </a>
+          </li>
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">&nbsp;<i
+                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div class="banner" id="banner" parallax=true
+         style="background: url('/img/default.png') no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+          <div class="page-header text-center fade-in-up">
+            <span class="h2" id="subtitle" title="【閱讀筆記】Swarm Intelligence | 什麼是心智?什麼是隨機?">
+              
+                【閱讀筆記】Swarm Intelligence | 什麼是心智?什麼是隨機?
+              
+            </span>
+
+            
+              <div class="mt-3">
+  
+  
+    <span class="post-meta">
+      <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+      <time datetime="2022-04-25 04:03" pubdate>
+        April 25, 2022 am
+      </time>
+    </span>
+  
+</div>
+
+<div class="mt-1">
+  
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-chart"></i>
+      1.2k words
+    </span>
+  
+
+  
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-clock-fill"></i>
+      
+      
+      10 minutes
+    </span>
+  
+
+  
+  
+    
+      <!-- 不蒜子统计文章PV -->
+      <span id="busuanzi_container_page_pv" style="display: none">
+        <i class="iconfont icon-eye" aria-hidden="true"></i>
+        <span id="busuanzi_value_page_pv"></span> visited
+      </span>
+    
+  
+</div>
+
+            
+          </div>
+
+          
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div class="py-5" id="board">
+          <article class="post-content mx-auto">
+            <!-- SEO header -->
+            <h1 style="display: none">【閱讀筆記】Swarm Intelligence | 什麼是心智?什麼是隨機?</h1>
+            
+            <div class="markdown-body">
+              <h2 id="什麼是心智-什麼是隨機"><a href="#什麼是心智-什麼是隨機" class="headerlink" title="什麼是心智?什麼是隨機?"></a>什麼是心智?什麼是隨機?</h2><p>在第一章，作者讓我們思考什麼是心智。怎麼樣叫做有智慧？機器有智慧嗎？在過去，為了測量人類的智慧，心理學家提出各種不同的智力理論，並基於這些理論發展出多種智力測驗。那我們要如何測量機器的心智？Turing (1950) 提出「圖靈測試」的思想實驗：若機器能和人類對話，而人類無法分辨其為機器或是人類，那麼這台機器是有智慧的。言下之意，「智慧」不只需要同等於人類的學習、推論、規劃、解決問題的能力，還需要具備理解他人、與人溝通的能力。前者在現今已勝過人類，未來還有突破的可能，但後者仍遠不及人類。</p>
+<p>我原本是電機系的學生，從大三開始雙主修心理系，當時的我最無法忍受心理系的一點，就是這裡的人們會討論電腦與人工智慧的心智。我熬夜寫出來的程式怎麼可能會有心智！作者彷彿聽見我們的困惑，針對此議題深入探討。工程師會認為機器沒有心智，是因為他們親手打造出這些機器運作的方式，包括演算法、參數、資料庫等，機器才能表現出人類行為，然而心智在我們的想像中，應該是獨立於他人，能自主產生想法的。作者藉此提出了一種巧妙的解釋:智慧的精髓在於是否有「適應」的能力，而適應通常伴隨著「隨機性」。世界上最精巧的兩個隨機系統是「演化」和「心智」，這兩者都有隨機的特質，這個特質使他們具有適應的能力。</p>
+<p>在這裡我們也必須反思何謂隨機。前面提到工程師和心理學家對人工智慧有截然不同的想法，正是因為對工程師來說，只要知曉程式如何運作，其行爲是可被預測的。隨機是指事件的發生具有機率性而充滿不確定性，但追根究底，這些事件其實都是由確定性的程序產生的，只是我們對這個世界的無知，使我們無法預測事件的結果。如果我們知道硬幣與桌面的材質和物理特性，以及兩者的碰撞特性，那麼擲硬幣的結果是可以計算出來的。更進一步來說，如果我們在生物層面上知道外來刺激的特性，大腦神經的結構，或是在認知層面上知道此人過去的一切經歷、信念和態度，這個人的行為是可以被計算的。</p>
+<p>Bem (2011) 曾做過超心理學的研究，超心理學是現今科學無法解釋的現象。在未來視的研究中，為了避免受試者預測結果造成偏誤，他採用物理程序產生隨機，測試受試者是否有從隨機中看見未來的能力，然而我認為不管是隨機還是超心理學，都可能是我們對這個世界充滿無知造成的，並不是無法解釋，而是我們尚未發現。康德曾說過，人類最大的的限制是自身的知識，在目前人類有限的知識之下，我們只能暫時視他們是隨機的。</p>
+<p>我們的信念每天都在變動，時時刻刻都會產生不同的想法，而族群基因的雜交、變異也具有隨機性，正因為如此，我們可以處理無法預測的挑戰，在遭遇從未見過的困難時想出從未想過的解決之道，而程式寫死的機器只要遇到設計者意料之外的狀況便束手無策。但我們也必須問自己一個問題：如果有一天我們終於解開大腦與神經系統的一切奧秘，隨機不再是隨機，心智對我們來說就是一台自動機器，此時的我們還能認為人類是自主的嗎?</p>
+
+            </div>
+            <hr>
+            <div>
+              <div class="post-metas mb-3">
+                
+                  <div class="post-meta mr-3">
+                    <i class="iconfont icon-category"></i>
+                    
+                      <a class="hover-with-bg" href="/categories/Swarm-Intelligence/">Swarm Intelligence</a>
+                    
+                  </div>
+                
+                
+                  <div class="post-meta">
+                    <i class="iconfont icon-tags"></i>
+                    
+                      <a class="hover-with-bg" href="/tags/swarm-intelligence/">swarm intelligence</a>
+                    
+                      <a class="hover-with-bg" href="/tags/AI/">AI</a>
+                    
+                      <a class="hover-with-bg" href="/tags/machine-learning/">machine learning</a>
+                    
+                      <a class="hover-with-bg" href="/tags/mind/">mind</a>
+                    
+                  </div>
+                
+              </div>
+              
+              
+                <div class="post-prevnext">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/2022/05/02/Swarm-Intelligence-3/">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">【閱讀筆記】Swarm Intelligence | 符號主義與連結主義</span>
+                        <span class="visible-mobile">Previous</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2022/04/25/Swarm-Intelligence-1/">
+                        <span class="hidden-mobile">【閱讀筆記】Swarm Intelligence | 前言 & 書本大綱</span>
+                        <span class="visible-mobile">Next</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+          </article>
+        </div>
+      </div>
+    </div>
+    
+      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
+        <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;TOC</p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+      </div>
+    
+  </div>
+</div>
+
+<!-- Custom -->
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">Search</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">keyword</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+
+    
+  </main>
+
+  <footer class="text-center mt-5 py-3">
+  <div class="footer-content">
+     <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+  </div>
+  
+
+  
+
+  
+</footer>
+
+
+  <!-- SCRIPTS -->
+  
+  <script  src="https://cdn.jsdelivr.net/npm/nprogress@0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nprogress@0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js" ></script>
+<script  src="https://cdn.jsdelivr.net/npm/bootstrap@4/dist/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+<!-- Plugins -->
+
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+  
+
+
+
+  
+    <script  src="https://cdn.jsdelivr.net/npm/tocbot@4/dist/tocbot.min.js" ></script>
+  
+  
+    <script  src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3/dist/jquery.fancybox.min.js" ></script>
+  
+  
+    <script  src="https://cdn.jsdelivr.net/npm/anchor-js@4/anchor.min.js" ></script>
+  
+  
+    <script defer src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js" ></script>
+  
+
+
+
+  <script defer src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" ></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 主题的启动项 保持在最底部 -->
+<script  src="/js/boot.js" ></script>
+
+
+</body>
+</html>

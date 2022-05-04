@@ -1,0 +1,606 @@
+
+
+<!DOCTYPE html>
+<html lang="en" data-default-color-scheme=auto>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="https://img.icons8.com/ios/250/000000/idea-sharing.png">
+  <link rel="icon" href="https://img.icons8.com/ios/250/000000/idea-sharing.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="John Doe">
+  <meta name="keywords" content="">
+  
+    <meta property="og:type" content="website">
+<meta property="og:title" content="Yore&#39;s zettelkasten">
+<meta property="og:url" content="http://example.com/index.html">
+<meta property="og:site_name" content="Yore&#39;s zettelkasten">
+<meta property="og:locale" content="en_US">
+<meta property="article:author" content="John Doe">
+<meta name="twitter:card" content="summary_large_image">
+  
+  
+  <title>Yore&#39;s zettelkasten</title>
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4/dist/css/bootstrap.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_ba1fz6golrf.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_lbnruvf0jn.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+<!-- 自定义样式保持在最底部 -->
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    var CONFIG = {"hostname":"example.com","root":"/","version":"1.8.14","typing":{"enable":false,"typeSpeed":70,"cursorChar":"_","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":true,"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml"};
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+<meta name="generator" content="Hexo 6.1.0"></head>
+
+
+<body>
+  <header style="height: 100vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>Yore</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                Home
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                Archives
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                Categories
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                Tags
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                About
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              &nbsp;<i class="iconfont icon-search"></i>&nbsp;
+            </a>
+          </li>
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">&nbsp;<i
+                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div class="banner" id="banner" parallax=true
+         style="background: url('/img/default.png') no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+          <div class="page-header text-center fade-in-up">
+            <span class="h2" id="subtitle" title="Computer Science || Cognitive Science">
+              
+                Computer Science || Cognitive Science
+              
+            </span>
+
+            
+          </div>
+
+          
+            <div class="scroll-down-bar">
+              <i class="iconfont icon-arrowdown"></i>
+            </div>
+          
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    
+      <div class="container nopadding-x-md">
+        <div class="py-5" id="board"
+          style=margin-top:0>
+          
+          <div class="container">
+            <div class="row">
+              <div class="col-12 col-md-10 m-auto">
+                
+
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2022/05/04/%E5%A6%82%E4%BD%95%E6%83%B3%E5%83%8F-4D-Klein-Bottle/" target="_self">
+          如何想像-4D-Klein-Bottle
+        </a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2022/05/04/%E5%A6%82%E4%BD%95%E6%83%B3%E5%83%8F-4D-Klein-Bottle/" target="_self">
+          
+          如何想像 4D Klein Bottle Self-intersectionKlein Bottle 在拓墣學中是一種只有一個面且沒有邊的物體，這種物體只存在四維中。有人嘗試做出類似形狀的 3D Klein Bottle，但在缺少一維的狀況下，會出現 self-intersection的狀況，例如瓶身必須開一個洞讓把手穿入。 如何想像？人類生活在三維空間，所以很難直接想像四維的物體。但我們可以將時
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2022-05-04 22:10" pubdate>
+              2022-05-04
+            </time>
+          </div>
+        
+        
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2022/05/02/Swarm-Intelligence-4/" target="_self">
+          【閱讀筆記】Swarm Intelligence | 人與人的連結
+        </a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2022/05/02/Swarm-Intelligence-4/" target="_self">
+          
+          前幾節我們探討處理表徵的架構，但要讓機器擁有智慧，必須讓機器擁有學習和適應的能力。在人工智慧的應用中，符號主義的學習方式是增加表徵，而連結主義的學習方式是改變連結的權重，或者是改變網路的結構。機器可以透過外在環境的回饋修改自身的參數，達到學習的效果，稱為強化學習 (Reinforcement Learning)。這個過程又和人類的操作制約理論相呼應，個體根據酬賞和懲罰學習並改變行為模式。不過當時的
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2022-05-02 22:34" pubdate>
+              2022-05-02
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/Swarm-Intelligence/">Swarm Intelligence</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/swarm-intelligence/">swarm intelligence</a>
+            
+              <a href="/tags/AI/">AI</a>
+            
+              <a href="/tags/machine-learning/">machine learning</a>
+            
+              <a href="/tags/connectionism/">connectionism</a>
+            
+              <a href="/tags/reinforcement-learning/">reinforcement learning</a>
+            
+              <a href="/tags/neuron-network/">neuron network</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2022/05/02/Swarm-Intelligence-3/" target="_self">
+          【閱讀筆記】Swarm Intelligence | 符號主義與連結主義
+        </a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2022/05/02/Swarm-Intelligence-3/" target="_self">
+          
+          那麽，該如何讓機器擁有智慧？我們可以回頭想想人類是如何思考的。人類與外界互動時並不是直接處理外在刺激，而是先將刺激轉為心智表徵，再進行處理。心智表徵是一種內在的認知符號，認知科學對於心智的運作方式分為兩種學派：計算主義(computationalism) 和聯結主義 (Connectionism);人工智慧則是將機器的運算方式分為兩種類別：符號主義 (symbolicism) 和聯結主義。 計算主
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2022-05-02 22:34" pubdate>
+              2022-05-02
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/Swarm-Intelligence/">Swarm Intelligence</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/swarm-intelligence/">swarm intelligence</a>
+            
+              <a href="/tags/AI/">AI</a>
+            
+              <a href="/tags/machine-learning/">machine learning</a>
+            
+              <a href="/tags/connectionism/">connectionism</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2022/04/25/Swarm-Intelligence-2/" target="_self">
+          【閱讀筆記】Swarm Intelligence | 什麼是心智?什麼是隨機?
+        </a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2022/04/25/Swarm-Intelligence-2/" target="_self">
+          
+          什麼是心智?什麼是隨機?在第一章，作者讓我們思考什麼是心智。怎麼樣叫做有智慧？機器有智慧嗎？在過去，為了測量人類的智慧，心理學家提出各種不同的智力理論，並基於這些理論發展出多種智力測驗。那我們要如何測量機器的心智？Turing (1950) 提出「圖靈測試」的思想實驗：若機器能和人類對話，而人類無法分辨其為機器或是人類，那麼這台機器是有智慧的。言下之意，「智慧」不只需要同等於人類的學習、推論、規劃
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2022-04-25 04:03" pubdate>
+              2022-04-25
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/Swarm-Intelligence/">Swarm Intelligence</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/swarm-intelligence/">swarm intelligence</a>
+            
+              <a href="/tags/AI/">AI</a>
+            
+              <a href="/tags/machine-learning/">machine learning</a>
+            
+              <a href="/tags/mind/">mind</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2022/04/25/Swarm-Intelligence-1/" target="_self">
+          【閱讀筆記】Swarm Intelligence | 前言 &amp; 書本大綱
+        </a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2022/04/25/Swarm-Intelligence-1/" target="_self">
+          
+          第一章 前言在介紹這本書之前，我們必須先了解本書出版的年代。本書出版於 2001 年，在二十年前，人工智慧的發展可說是百家爭鳴，當時常見的方法包括貝氏推論、遺傳演算法、符號理論等，神經網路因電腦運算力不足，反而沉寂一時。 本書所提到的神經網路均為傳統神經網路，內容聚焦在架構以及節點間連結的含義。儘管如此，本書作者從連結主義的觀點介紹神經網路，並認為此結構呼應了人類的心智表徵和思考邏輯，某方面來說也
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2022-04-25 03:43" pubdate>
+              2022-04-25
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/Swarm-Intelligence/">Swarm Intelligence</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/swarm-intelligence/">swarm intelligence</a>
+            
+              <a href="/tags/AI/">AI</a>
+            
+              <a href="/tags/machine-learning/">machine learning</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2022/04/25/Swarm-Intelligence-0/" target="_self">
+          【閱讀筆記】Swarm Intelligence | 背景 &amp; 摘要
+        </a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2022/04/25/Swarm-Intelligence-0/" target="_self">
+          
+          Swarm Intelligence這本書的內容橫跨社會心理學、認知科學和電腦科學，介紹群體智慧的特性，包括的互動、適應、學習等，以及在計算機科學領域的模擬與應用。本書的作者為James Kennedy、Russell C. Eberhart和Yuhui Shi，其中James Kennedy是Particle Swarm Optimization的發明人，因此在後半的章節有很大的篇幅在介紹PSO
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2022-04-25 02:58" pubdate>
+              2022-04-25
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/Swarm-Intelligence/">Swarm Intelligence</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/swarm-intelligence/">swarm intelligence</a>
+            
+              <a href="/tags/AI/">AI</a>
+            
+              <a href="/tags/machine-learning/">machine learning</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+
+
+
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">Search</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">keyword</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+
+    
+  </main>
+
+  <footer class="text-center mt-5 py-3">
+  <div class="footer-content">
+     <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+  </div>
+  
+
+  
+
+  
+</footer>
+
+
+  <!-- SCRIPTS -->
+  
+  <script  src="https://cdn.jsdelivr.net/npm/nprogress@0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nprogress@0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js" ></script>
+<script  src="https://cdn.jsdelivr.net/npm/bootstrap@4/dist/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+<!-- Plugins -->
+
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+  
+
+
+
+
+
+  <script defer src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" ></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 主题的启动项 保持在最底部 -->
+<script  src="/js/boot.js" ></script>
+
+
+</body>
+</html>
