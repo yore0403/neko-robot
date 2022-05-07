@@ -1,0 +1,532 @@
+
+
+<!DOCTYPE html>
+<html lang="en" data-default-color-scheme=auto>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="https://img.icons8.com/ios/250/000000/idea-sharing.png">
+  <link rel="icon" href="https://img.icons8.com/ios/250/000000/idea-sharing.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="John Doe">
+  <meta name="keywords" content="">
+  
+    <meta name="description" content="視覺化筆記軟體 Heptabase 試用七天全記錄 前言最近正在思考如何改善自己的筆記和知識系統，這一年陸續使用Obsidian 和 Notion 做筆記，後來聽說一位校內曾經頗有名的同學（？）正在開發 Heptabase 這個軟體，於是便做了一些功課。 寫前言（這段文字）的當下還沒有開始試用，但我想先解釋為何我會想是用這個產品，以及為何會想紀錄使用這個產品的歷程。 我一直以來都很清楚自己的思維方">
+<meta property="og:type" content="article">
+<meta property="og:title" content="[object Object]">
+<meta property="og:url" content="http://example.com/2022/05/07/%E8%A6%96%E8%A6%BA%E5%8C%96%E7%AD%86%E8%A8%98%E8%BB%9F%E9%AB%94%20Heptabase%20%E8%A9%A6%E7%94%A8%E4%B8%83%E5%A4%A9%E5%85%A8%E8%A8%98%E9%8C%84/index.html">
+<meta property="og:site_name" content="Yore&#39;s zettelkasten">
+<meta property="og:description" content="視覺化筆記軟體 Heptabase 試用七天全記錄 前言最近正在思考如何改善自己的筆記和知識系統，這一年陸續使用Obsidian 和 Notion 做筆記，後來聽說一位校內曾經頗有名的同學（？）正在開發 Heptabase 這個軟體，於是便做了一些功課。 寫前言（這段文字）的當下還沒有開始試用，但我想先解釋為何我會想是用這個產品，以及為何會想紀錄使用這個產品的歷程。 我一直以來都很清楚自己的思維方">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://media.heptabase.com/v1/images/5bc04436-35ac-40d4-9b96-48f962d0a9cd/949c7980-2eca-4310-a7e5-08ab251f8dea/%E6%88%AA%E5%9C%96%202022-05-07%20%E4%B8%8B%E5%8D%8812.39.02.png">
+<meta property="og:image" content="https://media.heptabase.com/v1/images/5bc04436-35ac-40d4-9b96-48f962d0a9cd/49cd0cc0-c1f5-4006-a201-54b168bda0eb/%E6%88%AA%E5%9C%96%202022-05-07%20%E4%B8%8A%E5%8D%8811.48.55.png">
+<meta property="og:image" content="https://media.heptabase.com/v1/images/5bc04436-35ac-40d4-9b96-48f962d0a9cd/2f5a59a4-aeed-40c4-9738-f276011e7f6f/%E6%88%AA%E5%9C%96%202022-05-07%20%E4%B8%8A%E5%8D%8811.37.34.png">
+<meta property="og:image" content="https://media.heptabase.com/v1/images/5bc04436-35ac-40d4-9b96-48f962d0a9cd/067e2de0-1d91-4271-bcb8-867c96aaff91/%E6%88%AA%E5%9C%96%202022-05-07%20%E4%B8%8A%E5%8D%889.23.43.png">
+<meta property="article:published_time" content="2022-05-07T02:10:11.000Z">
+<meta property="article:modified_time" content="2022-05-07T05:17:08.190Z">
+<meta property="article:author" content="John Doe">
+<meta property="article:tag" content="筆記軟體">
+<meta property="article:tag" content="Heptabase">
+<meta property="article:tag" content="卡片盒筆記">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://media.heptabase.com/v1/images/5bc04436-35ac-40d4-9b96-48f962d0a9cd/949c7980-2eca-4310-a7e5-08ab251f8dea/%E6%88%AA%E5%9C%96%202022-05-07%20%E4%B8%8B%E5%8D%8812.39.02.png">
+  
+  
+  <title>[object Object] - Yore&#39;s zettelkasten</title>
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4/dist/css/bootstrap.min.css" />
+
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/github-markdown-css@4/github-markdown.min.css" />
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hint.css@2/hint.min.css" />
+
+  
+    
+    
+      
+      <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@10/styles/github-gist.min.css" />
+    
+  
+
+  
+    <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3/dist/jquery.fancybox.min.css" />
+  
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_ba1fz6golrf.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_lbnruvf0jn.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+<!-- 自定义样式保持在最底部 -->
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    var CONFIG = {"hostname":"example.com","root":"/","version":"1.8.14","typing":{"enable":false,"typeSpeed":70,"cursorChar":"_","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":true,"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml"};
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+<meta name="generator" content="Hexo 6.1.0"></head>
+
+
+<body>
+  <header style="height: 70vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>Yore</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                Home
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                Archives
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                Categories
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                Tags
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                About
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              &nbsp;<i class="iconfont icon-search"></i>&nbsp;
+            </a>
+          </li>
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">&nbsp;<i
+                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div class="banner" id="banner" parallax=true
+         style="background: url('/img/default.png') no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+          <div class="page-header text-center fade-in-up">
+            <span class="h2" id="subtitle" title="[object Object]">
+              
+                [object Object]
+              
+            </span>
+
+            
+              <div class="mt-3">
+  
+  
+    <span class="post-meta">
+      <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+      <time datetime="2022-05-07 10:10" pubdate>
+        May 7, 2022 am
+      </time>
+    </span>
+  
+</div>
+
+<div class="mt-1">
+  
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-chart"></i>
+      4.9k words
+    </span>
+  
+
+  
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-clock-fill"></i>
+      
+      
+      41 minutes
+    </span>
+  
+
+  
+  
+    
+      <!-- 不蒜子统计文章PV -->
+      <span id="busuanzi_container_page_pv" style="display: none">
+        <i class="iconfont icon-eye" aria-hidden="true"></i>
+        <span id="busuanzi_value_page_pv"></span> visited
+      </span>
+    
+  
+</div>
+
+            
+          </div>
+
+          
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div class="py-5" id="board">
+          <article class="post-content mx-auto">
+            <!-- SEO header -->
+            <h1 style="display: none">[object Object]</h1>
+            
+            <div class="markdown-body">
+              <h1 id="視覺化筆記軟體-Heptabase-試用七天全記錄"><a href="#視覺化筆記軟體-Heptabase-試用七天全記錄" class="headerlink" title="視覺化筆記軟體 Heptabase 試用七天全記錄"></a>視覺化筆記軟體 Heptabase 試用七天全記錄</h1><p><img src="https://media.heptabase.com/v1/images/5bc04436-35ac-40d4-9b96-48f962d0a9cd/949c7980-2eca-4310-a7e5-08ab251f8dea/%E6%88%AA%E5%9C%96%202022-05-07%20%E4%B8%8B%E5%8D%8812.39.02.png" srcset="/img/loading.gif" lazyload></p>
+<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>最近正在思考如何改善自己的筆記和知識系統，這一年陸續使用Obsidian 和 Notion 做筆記，後來聽說一位校內曾經頗有名的同學（？）正在開發 Heptabase 這個軟體，於是便做了一些功課。</p>
+<p>寫前言（這段文字）的當下還沒有開始試用，但我想先解釋為何我會想是用這個產品，以及為何會想紀錄使用這個產品的歷程。</p>
+<p>我一直以來都很清楚自己的思維方式偏向圖像思考，對人工智慧和人類認知的「信仰」也偏向連結主義，所以我相信知識必須要經過連結才有價值。</p>
+<p>卡片盒筆記法是一種透過筆記和連結鞏固知識系統，並有效產出的一套方法。早在heptabase 出來之前，我就從 Obsidian 的介紹得知這套方法，這種筆記法看起來很符合我對知識系統的想像，所以我決定在升研究所之後有規劃的用 Obsidian，但最後的結局卻是： 逐漸龐大的資訊難以管理、越來越沒有動力打開 Obsidian，最終 Obsidian 變成了筆記墳場。反思可能的原因，我想是因為 Obsidian 的設計並不適合我，雖然一樣有連結，但更適合文字抽象思考者，依靠文字連結就可以回想筆記，導致像我需要圖像思考連結的使用者體驗很差。</p>
+<p>Heptabase 基於同樣的理念開發，不過有截然不同的外觀，也引用「記憶宮殿」等心理學現象作為設計發想。我已經看過一些教學和試用心得，最讓我心動的是 whiteboard 的功能，所以我想也許是另一個學習卡片盒筆記的契機。</p>
+<p>至於為什麼要紀錄感想呢？我在網路上看到很多使用心得，但也許是為了初步的推廣，這些資訊大多是讚揚，呈現出來的筆記也是理想化的結果，閱讀者在衡量是否值得購買時可能會過於樂觀。而身為一個窮學生，這個軟體實在有一點貴…因為之前太忙，我錯過了八折早鳥優惠，美金又在這個月快速爬升，所以算一算多花了不少錢購買軟體有點心痛。不過我認為為一個有潛力的產品投資未來絕對是值得的，所以我決定詳細記錄試用所遇到的種種優缺點以及歷程，來判斷是否要在第七天退貨，也讓未來考慮購買的潛在消費者有合適的參考。</p>
+<p>這篇不會著墨於太多 heptabase 的使用方式和功能介紹，如果想先瞭解 heptabase 是什麼可以參考以下優質文章：</p>
+<ul>
+<li><p><a target="_blank" rel="noopener" href="https://www.playpcesor.com/2022/04/heptabase.html">Heptabase 功能圖解教學篇，實現視覺化整理的個人知識管理工具</a></p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://sspai.com/post/71558">可视化卡片笔记写作？我试了最近才开放的 Heptabase</a> （簡中網站，對筆記軟體有非常詳盡的分析）</p>
+</li>
+</ul>
+<p>我目前所使用的筆記軟體是 Notion，所以事前我有規劃哪些筆記類型會紀錄在 Heptabase，哪些筆記還是在 Notion 紀錄。有一些筆記是之前在 Notion 寫好的，我會測試移植的易用性。另一方面，這週買了幾本書，我會用 Heptabase 練習撰寫閱讀心得。</p>
+<h2 id="第-1-天"><a href="#第-1-天" class="headerlink" title="第 1 天"></a>第 1 天</h2><p><img src="https://media.heptabase.com/v1/images/5bc04436-35ac-40d4-9b96-48f962d0a9cd/49cd0cc0-c1f5-4006-a201-54b168bda0eb/%E6%88%AA%E5%9C%96%202022-05-07%20%E4%B8%8A%E5%8D%8811.48.55.png" srcset="/img/loading.gif" lazyload alt="懵懵懂懂的創了幾張不明所以的卡片"></p>
+<ul>
+<li><p>今天剛 meeting 完，正好用 Hepta 做筆記，我認為 whiteboard 確實滿有趣的，不過可能是因為不熟悉的緣故，操作和歸納知識的過程有一點困難。我不知道怎麼拖曳白板移動視角，但理論上這功能應該要有orz（註：這裡只是本人沒有研究快捷鍵而已…下有補充說明）</p>
+</li>
+<li><p>事後補充：雖然 heptabase 號稱學習曲線快，但我認為需要平常就習慣鍵盤使用，並且先稍微了解快捷鍵的的配置，對於習慣用滑鼠探索的使用者就要稍微找一下功能位置，另外也需要本身有使用過筆記軟體的經驗，才會對哪些功能可能在哪些位置比較有概念</p>
+</li>
+<li><p>和 Obsidian 有一樣的問題：Card library 的卡片資料結構是完全扁平化的。Obsidian 的扁平化架構只是網路上推薦的做法，想用層狀資料夾結構也可以，但 hepta 就不支援這個功能。雖然可以增加 tag 分類，但我更期望這些卡片直接形成於一個資料夾內，有一個地理位置上的資料夾和手動選 filter 或標 tag 還是有一點差別。（註：第三天有一些想法補充）</p>
+</li>
+<li><p>有注意到一點還不錯的是用中文打字出現的@也會觸發連結選單，這點對中文使用者是福音。英文國家開發的軟體通常會把中文全體字和英文視為不同編碼，所以時不時要切換。</p>
+</li>
+</ul>
+<h2 id="第-2-天"><a href="#第-2-天" class="headerlink" title="第 2 天"></a>第 2 天</h2><ul>
+<li><p>看了一些使用者分享和實際的案例，對於用法有漸漸上手。卡片盒筆記法本身就沒有那麼直觀，換到 heptabase 必須連同做筆記的方式一齊改變，所以需要一些時間習慣。</p>
+</li>
+<li><p>我目前沒有找到可以把 Notion 筆記整齊匯入 Hepta 的方法。先不提Notion的匯出檔案命名方式有多爛，如果直接把 Notion 匯出的資料夾匯入 Hepta，Hepta會把筆記「啪」的灑在 card library裡（當然這跟 Notion 極爛的匯出格式也有一點關係，我實在整理不完只好一鍵全部匯入）。更慘的是 Hepta 不會顯示 .md 的檔名，而Notion 輸出後標題不會附在內文，所以全部的卡片都沒有標題資訊。另外我在notion 大量使用 callout，但 callout 其實不是markdown支援的格式，所以版面會跑掉。目前的做法是把需要的筆記手動複製進 Hepta，並且整理成 Hepta-friendly的形式。</p>
+</li>
+<li><p>說個題外話，會想嘗試新的筆記軟體有一部分是因為我覺得未來 Notion 有可能會降低可移植性，目前 Notion 可以匯出md檔但檔名格式很醜，但需仰賴使用者自行開發的外掛，才能批量匯出能用的md檔，不排除未來會改到連外掛都無力回天。當越來越多的使用者對於特定服務過於依賴時，壟斷就越容易發生，而我希望能夠對自己的知識資產有一定的主導權。 Heptabase 的匯出至少不會截斷標題，今天嘗試把筆記整理轉移到hexo（支援 md 格式的網誌框架）沒有太大的問題。</p>
+</li>
+</ul>
+<h2 id="第-3-天"><a href="#第-3-天" class="headerlink" title="第 3 天"></a>第 3 天</h2><ul>
+<li><p>今天用 hepta 做了凸函數最佳化的筆記和「卡片盒筆記」這本書的心得（現在有繁中版了！非常推薦hepta和這本書搭配服用XD）。hepta的優勢開始浮現了，凸函數最佳化需要線性代數的先備知識，後面課程中的推導又總是和之前上過的名詞定義有關，每個單元環環相扣，而正是卡片盒筆記強大的地方，透過圖像化的連結幫助連結、強化自己的知識系統。</p>
+</li>
+<li><p>這份地圖中有部分是在 Notion 上的筆記，有部分是在 hepta 新增的筆記。Notion上的筆記寫到第三週，但現在已經上到第八週了（太懶…）。所以這張心智圖分成左右兩邊，把已有的筆記整理完後先跳過期中考前的部分，做好期末考範圍的筆記比較優先。<del>把筆記圖像化的另一個優點是比較沒有跳過筆記的罪惡感，一眼望過去不會發現缺了一大篇章節</del>。</p>
+</li>
+</ul>
+<p><img src="https://media.heptabase.com/v1/images/5bc04436-35ac-40d4-9b96-48f962d0a9cd/2f5a59a4-aeed-40c4-9738-f276011e7f6f/%E6%88%AA%E5%9C%96%202022-05-07%20%E4%B8%8A%E5%8D%8811.37.34.png" srcset="/img/loading.gif" lazyload alt="凸函數最佳化白板"></p>
+<ul>
+<li><p>我想前幾天用的不順手不單只是因為對軟體或筆記法的不熟悉，而是因為自己還維持舊有的筆記習慣。hepta是一款認同卡片盒筆記的理念而發展出來的軟體，如果只是將原本用舊模式寫下的筆記複製到 hepta，那感覺到違和也是理所當然的。就像「卡片盒筆記」裡提到的運輸貨櫃案例，如果沒有把既有的架構和習慣整個改掉，那再好的點子都無法帶來轉變。</p>
+</li>
+<li><p>「卡片盒筆記」裡有提到盧曼的作法，我認為地理資訊以及出處資訊確實是必要的，盧曼會詳實紀錄出處，把同一個脈絡的卡片放在一起，卡片的索引是為了幫助連結不同脈絡的卡片。實體卡片盒具有地理上的資訊，可以幫助回想筆記的實際位置，和我在第一天提到的資料夾是一樣的道理。</p>
+</li>
+<li><p>在熟悉 hepta 之後，我發現 whiteboard 已經發揮了紀錄地理資訊的功能，我將 whiteboard 當作資料夾使用，所以 card library 過於雜亂的問題變得比較沒那麼致命，不過除非想清理不小心創出來沒刪掉的卡片，否則我應該不會點開 card library。</p>
+</li>
+<li><p>目前我也沒有用過 timeline 的功能，因為我的想法通常和當下的專案相關，這種卡片我會直接在whiteboard新增卡片。至於完全和現有 map 無關的筆記，為了避免一堆沒有家的 orphan card 讓我感到焦慮，我目前還是把這類的想法記在 notion。（註：結果隔一天就用到了XD）</p>
+</li>
+</ul>
+<h2 id="第-4-天"><a href="#第-4-天" class="headerlink" title="第 4 天"></a>第 4 天</h2><ul>
+<li><p>看來得收回「timeline 沒用」的論點。今天在搜尋時間管理的資料時，YT推薦了 Scrum 相關的影片給我。平常的我一定看一看，了解一下就跳到下一個影片了，但我突然覺得有些專案管理的點子很不錯，想要記下來，卻又不想特地開一個 whiteboard，這時就可以在 timeline 隨意的紀錄一些點子。這裡我也把我的想法拆成幾張卡片，例如一張卡片介紹 Scrum 這個框架，一張卡片介紹開放式研究會遇到的問題並引用 Scrum 說明這個框架如何解決問題，再將這些卡片互相連結。</p>
+</li>
+<li><p>這幾天我一直拼命地做筆記，而且盡量地符合卡片盒「精簡」、「一次只說一個概念」的原則。第一次用 obsidian的時候我也很常做筆記，但卻是不知不覺變成一大篇維基式的筆記，或者記到一半就放棄、殘缺不堪的筆記。</p>
+</li>
+<li><p>心理學有一個名詞叫 affordance，意思是物品本身的特質已經決定了看到、接觸到他的人會如何使用這個物品。obsidian 是參考「卡片盒」的理念產生，但全頁式的筆記介面就註定了使用者會下意識想辦法用完整的筆記填滿頁面。而如果無法填好空白，就會帶來挫折，至少對我來說，看到東缺西殘的筆記讓我越來越不想打開 obsidian。</p>
+</li>
+<li><p>Hepta 卡片式的筆記反而提醒我「不要寫太長」，如果卡片越伸越長，我會開始思考是不是哪邊的敘述太過冗長，並且對卡片做精簡和拆分。</p>
+</li>
+<li><p>使用過維基百科的人應該都會有一個困擾：在瀏覽某頁面時，因為不懂某些名詞所以點開超連結，但點進超連結，又看到另一個落落長的頁面，最後努力讀完所有段落還是看不懂。卡片的簡潔性解決了這個問題，因為瀏覽頁面的人的需求是理解該篇內容，所以只要引用可以解釋原脈絡的卡片即可。</p>
+</li>
+<li><p>原本「維基式」的筆記對我來說是非常疲憊的任務，但拆解成「卡片式」的筆記後，每一次完成一張卡片只要三四行，完成筆記又形成一種反饋，讓我有動力去撰寫下一張的卡片。</p>
+</li>
+<li><p>不過這個軟體還存在一些技術上的問題，例如滑鼠點擊控制插入點的功能還不是很完善，甚至會到處亂跑；數學式語法非常難操作，插入點從後往前移動到數學式時，游標會直接跳到數學是最前面，而且不能用滑鼠點擊更改游標位置。hepta 的理念之一是希望可以做到完全用鍵盤快捷控制，這也許體現在他們的開發優先序上，捨棄滑鼠改用純鍵盤操作 hepta ，感覺工作流確實流暢許多。我很同意學會一套快捷建對工作效率會有很大的提升，但像我這樣的業餘使用者，還是希望滑鼠操作可以更順暢。另一方面，正因為我認為這個架構特別適合學習數學，數學式語法的問題會是讓我猶豫使用的原因。</p>
+</li>
+</ul>
+<h2 id="第-5-天、第-6-天"><a href="#第-5-天、第-6-天" class="headerlink" title="第 5 天、第 6 天"></a>第 5 天、第 6 天</h2><ul>
+<li><del>熱戀期好像過了…</del></li>
+<li>這幾天高密度的撰寫筆記，對我來說是前所未有的高產出，但確實是有一點疲乏，所以我決定休息一下。順便看看如果一段時間沒有使用軟體，回來會不會感到生疏難用。</li>
+</ul>
+<h2 id="第-7-天"><a href="#第-7-天" class="headerlink" title="第 7 天"></a>第 7 天</h2><ul>
+<li><p>今天又是 meeting day，第一天的紀錄曾經覺得不習慣，但經過一週的試用後，做筆記的思維模式已經改變，效率也快上許多。圖象化卡片的設計支援我一次撰寫多張卡片並來回檢閱、連結，非常適合 brain storming。</p>
+</li>
+<li><p>突然發現原本修改標題時連結不會跟著改，但現在居然可以同步修改了，去查了官網發現是在我倦怠的這幾天更新的。</p>
+</li>
+</ul>
+<p><img src="https://media.heptabase.com/v1/images/5bc04436-35ac-40d4-9b96-48f962d0a9cd/067e2de0-1d91-4271-bcb8-867c96aaff91/%E6%88%AA%E5%9C%96%202022-05-07%20%E4%B8%8A%E5%8D%889.23.43.png" srcset="/img/loading.gif" lazyload alt="研究 brain storming，我一次開出好幾張卡片，並且頻繁來回切換、雕琢不同卡片的論述邏輯以及關聯性"></p>
+<h2 id="總結"><a href="#總結" class="headerlink" title="總結"></a>總結</h2><p>最後的決定是不退了！讚！</p>
+<p>總結一下我的使用感想：</p>
+<ul>
+<li><p>目前遇到的短處主要有兩類：</p>
+<ul>
+<li>覺得某些功能雞肋或不符合需求：<br>除非自己創業做一個，不然不太可能存在一個完全 fit 自己需求的軟體，重點應該放在你會使用的功能是否符合自己的需求。另一個要考量的點是他在核心設計上是否能加強你的筆記動力，而不是造成阻力。最後幾天其實有一種熱戀期消退的感覺，放緩了做筆記的速度，但第七天紀錄meeting的想法時，又不自覺的寫了很多卡片。遊戲化系統也是一樣的道理，如果這個軟體不只帶來便利，還帶來動力，在提升自我發展方面肯定是事半功倍的。</li>
+<li>不順手、數學式語法、bug：<br>剩下遇到的問題都是可以預期未來會修復的東西（應該啦其實我不確定，不過想知道預計添加或修復的功能可以去<a target="_blank" rel="noopener" href="https://heptaplatforms.notion.site/heptaplatforms/Heptabase-Public-Wiki-4dcb425de51c42c28d2fd57d0dbbdcdd">官方wiki</a>瀏覽）。</li>
+</ul>
+</li>
+<li><p>綜合這七天所看到的狀況，購買這款軟體支援他們，讓他們早日完善功能，絕對是雙贏 XD 就算最後沒有做出來，我也非常 respect 他們的創新和解決問題的精神，祝他們早日開發完成。</p>
+</li>
+<li><p>這篇也許會持續更新，例如發現<del>半年後又變成卡片墳場之類的</del>（那可能要檢討一下自己了…）</p>
+</li>
+</ul>
+
+            </div>
+            <hr>
+            <div>
+              <div class="post-metas mb-3">
+                
+                
+                  <div class="post-meta">
+                    <i class="iconfont icon-tags"></i>
+                    
+                      <a class="hover-with-bg" href="/tags/%E7%AD%86%E8%A8%98%E8%BB%9F%E9%AB%94/">筆記軟體</a>
+                    
+                      <a class="hover-with-bg" href="/tags/Heptabase/">Heptabase</a>
+                    
+                      <a class="hover-with-bg" href="/tags/%E5%8D%A1%E7%89%87%E7%9B%92%E7%AD%86%E8%A8%98/">卡片盒筆記</a>
+                    
+                  </div>
+                
+              </div>
+              
+              
+                <div class="post-prevnext">
+                  <article class="post-prev col-6">
+                    
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2022/05/04/%E5%A6%82%E4%BD%95%E6%83%B3%E5%83%8F-4D-Klein-Bottle/">
+                        <span class="hidden-mobile">如何想像 4D 克萊因瓶 Klein Bottle</span>
+                        <span class="visible-mobile">Next</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+          </article>
+        </div>
+      </div>
+    </div>
+    
+      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
+        <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;TOC</p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+      </div>
+    
+  </div>
+</div>
+
+<!-- Custom -->
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">Search</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">keyword</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+
+    
+  </main>
+
+  <footer class="text-center mt-5 py-3">
+  <div class="footer-content">
+     <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+  </div>
+  
+
+  
+
+  
+</footer>
+
+
+  <!-- SCRIPTS -->
+  
+  <script  src="https://cdn.jsdelivr.net/npm/nprogress@0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nprogress@0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js" ></script>
+<script  src="https://cdn.jsdelivr.net/npm/bootstrap@4/dist/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+<!-- Plugins -->
+
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+  
+
+
+
+  
+    <script  src="https://cdn.jsdelivr.net/npm/tocbot@4/dist/tocbot.min.js" ></script>
+  
+  
+    <script  src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3/dist/jquery.fancybox.min.js" ></script>
+  
+  
+    <script  src="https://cdn.jsdelivr.net/npm/anchor-js@4/anchor.min.js" ></script>
+  
+  
+    <script defer src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js" ></script>
+  
+
+
+
+  <script defer src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" ></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 主题的启动项 保持在最底部 -->
+<script  src="/js/boot.js" ></script>
+
+
+</body>
+</html>
